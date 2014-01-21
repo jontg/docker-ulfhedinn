@@ -16,6 +16,13 @@ Run the image:
 $ ./bin/run.sh
 ```
 
+Example Restore
+===============
+
+```bash
+root@7bd591a864c3:/# /usr/bin/mysql -u root -ptt-rss --database ttrss < /backups/2014-01-21.sql
+```
+
 Credit
 ======
 

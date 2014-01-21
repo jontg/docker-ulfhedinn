@@ -19,4 +19,6 @@ ADD start.sh /bin/start.sh
 ADD nginx-tt-rss /etc/nginx/sites-available/default
 ADD crontab /etc/cron.d/tt-rss
 
+EXPOSE 80
+
 RUN wget -O - https://github.com/gothfox/Tiny-Tiny-RSS/archive/1.11.tar.gz | tar -C /var/www/tt-rss/ --strip-components=1 -xz

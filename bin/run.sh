@@ -3,7 +3,7 @@
 BASE_DIR=/mnt/apps
 mkdir -p $BASE_DIR/tt-rss/{logs,backups}
 docker run -d \
-    -v /logs:$BASE_DIR/tt-rss/logs \
-    -v /backups:$BASE_DIR/tt-rss/backups \
+    -v $BASE_DIR/tt-rss/logs:/logs \
+    -v $BASE_DIR/tt-rss/backups:/backups \
     -p 80:80 \
     rpi-tt-rss:latest

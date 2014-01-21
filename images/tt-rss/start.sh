@@ -8,4 +8,5 @@
 
 if [ ! /usr/bin/mysql -e 'use ttrss' ]; then
   /usr/bin/mysqladmin create ttrss
+  /usr/bin/mysqladmin -u root password 'tt-rss'
 fi

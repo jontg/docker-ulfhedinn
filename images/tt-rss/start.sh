@@ -6,7 +6,7 @@
 # Give MySQL a few seconds to start up
 /bin/sleep 5
 
-if [ ! /usr/bin/mysql -e 'use ttrss' ]; then
+if ! /usr/bin/mysql -u root -ptt-rss -e 'use ttrss'; then
   /usr/bin/mysqladmin create ttrss
   /usr/bin/mysqladmin -u root password 'tt-rss'
 fi

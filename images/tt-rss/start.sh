@@ -9,4 +9,6 @@
 if ! /usr/bin/mysql -u root -ptt-rss -e 'use ttrss'; then
   /usr/bin/mysqladmin create ttrss
   /usr/bin/mysqladmin -u root password 'tt-rss'
+
+  chmod -R 777 /var/www/tt-rss/{cache/images,cache/upload,cache/export,cache/js,feed-icons,lock}
 fi

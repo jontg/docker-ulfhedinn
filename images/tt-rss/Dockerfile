@@ -2,7 +2,10 @@ FROM resin/rpi-raspbian:wheezy
 MAINTAINER jon.gretarsson@gmail.com
 RUN apt-get update
 RUN apt-get upgrade -y
+
 RUN apt-get install -y -q openssh-server supervisor cron
+
+RUN mkdir -p /var/run/sshd
 
 CMD ["/usr/bin/supervisord"]
 

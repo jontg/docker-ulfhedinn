@@ -1,7 +1,7 @@
 Setup
 =====
 
-Follow the instructions provided by [[Resin.io|http://resin.io/blog/docker-on-raspberry-pi-in-4-simple-steps/]] to get a working Arch Linux install with Docker running on your raspberry pi.
+Follow the instructions provided by [Resin.io](http://resin.io/blog/docker-on-raspberry-pi-in-4-simple-steps/) to get a working Arch Linux install with Docker running on your raspberry pi.
 
 Build the image:
 ```bash
@@ -15,3 +15,8 @@ Run the image:
 ```bash
 $ ./bin/run.sh
 ```
+
+Credit
+======
+
+Yay [Docker](http://docker.io).  Yay [Resin.io](http://resin.io/).  Yay [Reinhard Seiler](http://reinhard-seiler.blogspot.com/2013/05/tutorial-how-to-install-tiny-tiny-rss.html).

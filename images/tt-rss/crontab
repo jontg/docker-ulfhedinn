@@ -3,3 +3,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # m  h dom mon dow command
 */30 * *   *   *   /usr/bin/php /var/www/tt-rss/update.php --feeds --quiet
+0    3 *   *   *   /usr/bin/mysqldump -u root -ptt-rss --all-databases > /backups/$(date +%F).sql

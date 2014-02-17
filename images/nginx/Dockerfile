@@ -8,7 +8,7 @@ RUN mkdir -p /var/run/sshd /var/log/supervisor
 
 CMD ["/usr/bin/supervisord"]
 
-EXPOSE 80
+EXPOSE 80 443
 
 ADD sites-enabled /etc/nginx/conf/sites-enabled
 ADD supervisor.conf /etc/supervisor/conf.d/supervisord.conf

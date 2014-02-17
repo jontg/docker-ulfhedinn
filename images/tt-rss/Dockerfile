@@ -22,4 +22,4 @@ ADD nginx-tt-rss /etc/nginx/sites-available/default
 ADD nginx.conf /etc/nginx/nginx.conf
 RUN crontab -e < /etc/cron.d/tt-rss
 
-EXPOSE 80
+EXPOSE 80 443

@@ -19,6 +19,6 @@ RUN sed -i '/cgi\.fix_pathinfo=1/c\cgi.fix_pathinfo=0;' /etc/php5/fpm/php.ini &&
 ADD supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 ADD start.sh /bin/start.sh
 ADD nginx-tt-rss /etc/nginx/sites-available/default
-ADD crontab /etc/cron.d/tt-rss
+RUN crontab -e < /etc/cron.d/tt-rss
 
 EXPOSE 80

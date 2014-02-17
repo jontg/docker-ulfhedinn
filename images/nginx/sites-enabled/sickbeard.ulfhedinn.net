@@ -1,0 +1,21 @@
+upstream sickbeard {
+  server 192.168.1.5:8081; # mediapi.local:8081
+  keepalive 512;
+}
+
+server {
+  listen 80;
+  listen 443 ssl;
+
+  keepalive_timeout 70;
+
+  server_name sickbeard.ulfhedinn.net;
+  access_log /var/log/nginx/sickbeard.ulfhedinn.net.access.log;
+  error_log /var/log/nginx/sickbeard.ulfhedinn.net.error.log;
+
+  location / {
+      expires                 off;
+      proxy_pass              http://sickbeard;
+      include                 proxy_params;
+  }
+}

@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian
+FROM resin/rpi-raspbian:wheezy
 MAINTAINER jon.gretarsson@gmail.com
 RUN apt-get update
 RUN apt-get upgrade -y
